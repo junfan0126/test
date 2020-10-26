@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>新建文件</title>
+        <title>新建留言</title>
         <link rel="stylesheet" href="../../../css/bootstrap.min.css">
         <link rel="stylesheet" href="../../../css/add.css">
 
@@ -12,7 +12,7 @@
             <div class="container">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="/ListServlet">
-                        文件展览
+                        留言展览
                     </a>
                 </div>
             </div>
@@ -29,13 +29,13 @@
                 <div class="form-group">
                 <div class="col-sm-offset-2 col-sm-10">
                     <input type="file" name="file"/>
-                    <input type="submit" class="btn btn-primary" value="上传文件">
+                    <input type="submit" class="btn btn-primary" value="上传留言">
                 </div>
             </div>
 
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
-                        <a class="btn btn-default" href="/ListServlet">查看文件</a>
+                        <a class="btn btn-default" href="/ListServlet">查看留言</a>
                     </div>
                 </div>
 

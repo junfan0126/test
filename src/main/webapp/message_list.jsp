@@ -79,7 +79,7 @@
                         </div>
                         <div class="alt-content">
                             <h3>${msg.title}</h3>
-                            <a href="javascript:void(0)" >comment</a>
+                            <a href="/CommentLIstServlet" >comment</a>
                         </div>
                     </div>
                 </c:forEach>
@@ -92,7 +92,7 @@
                 <% if (null != request.getSession().getAttribute("user")) {%>
 
                 <div id="fatie">
-                    <a href="add_message.jsp"><button>点我上传</button></a>
+                    <a href="add_message.jsp"><button>发布</button></a>
                 </div>
 
                 <%} else { %>

@@ -35,8 +35,8 @@
   </servlet>
 
   <servlet>
-    <servlet-name>MessageServlet</servlet-name>
-    <servlet-class>com.cs533.Servlet.MessageServlet</servlet-class>
+    <servlet-name>CommentServlet</servlet-name>
+    <servlet-class>com.cs533.Servlet.CommentServlet</servlet-class>
   </servlet>
 
   <servlet>
@@ -72,13 +72,13 @@
   </servlet-mapping>
 
   <servlet-mapping>
-    <servlet-name>MessageServlet</servlet-name>
-    <url-pattern>/MessageServlet</url-pattern>
+    <servlet-name>CommentLIstServlet</servlet-name>
+    <url-pattern>/CommentLIstServlet</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>
-    <servlet-name>MessageServlet</servlet-name>
-    <url-pattern>/MessageServlet1</url-pattern>
+    <servlet-name>CommentServlet</servlet-name>
+    <url-pattern>/CommentServlet</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

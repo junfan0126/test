@@ -31,7 +31,7 @@
 
 <section class="main">
     <div class="container">
-        <c:forEach items="${messages}" var="msg">
+        <c:forEach items="${comments}" var="msg">
             <div class="alt-item">
                 <div class="alt-head">
                     <div class="alt-info">
@@ -50,7 +50,7 @@
 
 <section class="page">
     <div class="container">
-        <% if (null != request.getSession().getAttribute("file")) {%>
+        <% if (null != request.getSession().getAttribute("user")) {%>
         <div id="fatie">
             <a href="add_comment.jsp"><button>点我评论</button></a>
         </div>

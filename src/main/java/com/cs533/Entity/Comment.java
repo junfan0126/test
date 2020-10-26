@@ -2,7 +2,10 @@ package com.cs533.Entity;
 
 import java.util.Date;
 
-public class Message {
+/**
+ * @author haojunfan
+ */
+public class Comment {
     private int id;
 
     private int userId;
@@ -14,9 +17,11 @@ public class Message {
 
     private Date createTime;
 
-
-
-    public Message(int id, String username, String content) {
+    public Comment(int userId, String username, String content, Date createTime) {
+        this.userId = userId;
+        this.username = username;
+        this.content = content;
+        this.createTime = createTime;
     }
 
     public int getId() {
@@ -42,7 +47,6 @@ public class Message {
     public void setUsername(String username) {
         this.username = username;
     }
-
 
 
     public String getContent() {

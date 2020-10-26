@@ -11,9 +11,6 @@ public class User implements Serializable {
     private String sex;
 
 
-    public int getUser_id(int user_id) {
-        return this.user_id;
-    }
 
     public void setUser_id(int user_id) {
         this.user_id = user_id;

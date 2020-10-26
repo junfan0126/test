@@ -32,7 +32,7 @@
     <div class="page-header">
         <h3><small>新建评论</small></h3>
     </div>
-    <form class="form-horizontal" action="/MessageServlet" method="post">
+    <form class="form-horizontal" action="/CommentServlet" method="post">
 
         <div class="form-group">
             <label for="inputContent" class="col-sm-2 control-label">内容 ：</label>
