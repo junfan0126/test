@@ -8,7 +8,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>文件板</title>
+        <title>留言板</title>
         <link rel="stylesheet" href="../../../css/index.css">
         <script type="text/javascript">
             function submitMessageForm(flag) {
@@ -35,15 +35,9 @@
     </head>
 
     <body>
-
-
-
         <header>
             <div class="container">
                 <% if (null != request.getSession().getAttribute("user")) {%>
-                    <nav>
-                        <a href="/ListServlet">我的文件</a>
-                    </nav>
                     <nav>
                         <a href="/userInfo.do">我的信息</a>
                     </nav>
@@ -58,7 +52,7 @@
         <section class="banner">
             <div class="container">
                 <div>
-                    <h1>文件管理平台</h1>
+                    <h1>简易留言板</h1>
                 </div>
             </div>
         </section>
@@ -69,17 +63,16 @@
 
         <section class="main">
             <div class="container">
-                <c:forEach items="${files}" var="msg">
+                <c:forEach items="${messages}" var="msg">
                     <div class="alt-item">
                         <div class="alt-head">
                             <div class="alt-info">
                                 <span> 发布人：<a href="">${msg.username}</a></span>
-                                <span>发布时间：<fmt:formatDate pattern="yyyy-MM-dd HH:mm:ss" value="${msg.creatTime}"/></span>
                             </div>
                         </div>
                         <div class="alt-content">
                             <h3>${msg.title}</h3>
-                            <a href="/CommentLIstServlet" >comment</a>
+                            <p>${msg.content}</p>
                         </div>
                     </div>
                 </c:forEach>
@@ -93,6 +86,7 @@
 
                 <div id="fatie">
                     <a href="add_message.jsp"><button>发布</button></a>
+                    <a href="/CommentLIstServlet"><button>评论</button></a>
                 </div>
 
                 <%} else { %>

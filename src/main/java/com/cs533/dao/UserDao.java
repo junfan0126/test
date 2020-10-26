@@ -50,7 +50,6 @@ public class UserDao {
 
         /**
          * 根据username查询用户信息
-         *
          * @param username
          * @return
          */
@@ -71,13 +70,10 @@ public class UserDao {
                 rs = stmt.executeQuery();
                 while (rs.next()) {
                     user = new User();
-
                     user.setUsername(rs.getString("username"));
                     user.setPassword(rs.getString("password"));
                     user.setNickname(rs.getString("nickname"));
                     user.setSex(rs.getString("sex"));
-
-
                 }
             } catch (SQLException e) {
                 System.out.println("查询用户信息失败。");
@@ -90,7 +86,6 @@ public class UserDao {
 
         /**
          * 修改用户信息
-         *
          * @param user
          * @return
          */
@@ -109,9 +104,6 @@ public class UserDao {
                 stmt.setString(2, user.getPassword());
                 stmt.setString(3, user.getSex());
                 stmt.setString(4, user.getNickname());
-
-
-
                 stmt.execute();
             } catch (SQLException e) {
                 System.out.println("查询用户信息失败。");

@@ -12,16 +12,37 @@ public class Comment {
 
     private String username;
 
-
     private String content;
 
     private Date createTime;
+
+    private int greatNum;
+
+    public Comment() {
+
+    }
+
+    public Comment(int id, int userId, String username, String content, Date createTime) {
+        this.id = id;
+        this.userId = userId;
+        this.username = username;
+        this.content = content;
+        this.createTime = new Date();
+    }
+
+    public int getGreatNum() {
+        return greatNum;
+    }
+
+    public void setGreatNum(int greatNum) {
+        this.greatNum = greatNum;
+    }
 
     public Comment(int userId, String username, String content, Date createTime) {
         this.userId = userId;
         this.username = username;
         this.content = content;
-        this.createTime = createTime;
+        this.createTime = new Date();
     }
 
     public int getId() {

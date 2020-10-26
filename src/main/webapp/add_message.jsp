@@ -25,20 +25,29 @@
 
 
 
-            <form class="form-horizontal" action="/addMessage.do" enctype="multipart/form-data" method="post">
+            <form class="form-horizontal" action="/addMessage.do" method="post">
                 <div class="form-group">
-                <div class="col-sm-offset-2 col-sm-10">
-                    <input type="file" name="file"/>
-                    <input type="submit" class="btn btn-primary" value="上传留言">
+                    <label for="inputTitle" class="col-sm-2 control-label">标题 ：</label>
+                    <div class="col-sm-8">
+                        <input name="title" class="form-control" id="inputTitle" placeholder="title">
+                    </div>
                 </div>
-            </div>
-
+                <div class="form-group">
+                    <label for="inputContent" class="col-sm-2 control-label">内容 ：</label>
+                    <div class="col-sm-8">
+                        <textarea name="content"  class="form-control" rows="3" id="inputContent" placeholder="Content"></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <button type="submit" class="btn btn-primary">发布留言</button>&nbsp;&nbsp;&nbsp;
+                    </div>
+                </div>
                 <div class="form-group">
                     <div class="col-sm-offset-2 col-sm-10">
                         <a class="btn btn-default" href="/ListServlet">查看留言</a>
                     </div>
                 </div>
-
             </form>
         </div>
         <footer class="text-center" >

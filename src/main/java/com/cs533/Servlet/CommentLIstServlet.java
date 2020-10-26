@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.List;
 
 /**
@@ -38,11 +39,16 @@ public class                                                                    
         }
 
 
-        List<Comment> comments =CommentService.getComment(page, 5);
+        List<Comment> comments = null;
+        try {
+            comments = CommentService.getComment(page, 5);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         int count = commentService.countComment();
         int last = count % 5 == 0 ? (count / 5) : ((count / 5) + 1);
         req.setAttribute("last", last);
-        req.setAttribute("comments", comments);
+        req.getSession().setAttribute("comments", comments);
         req.setAttribute("page", page);
         req.getRequestDispatcher("commentList.jsp").forward(req, resp);
     }

@@ -2,6 +2,7 @@ package com.cs533.Servlet;
 
 import com.cs533.Entity.Comment;
 
+import com.cs533.Entity.Message;
 import com.cs533.Entity.User;
 import com.cs533.Service.CommentService;
 
@@ -33,6 +34,7 @@ public class CommentServlet extends HttpServlet {
     public void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
             User user = (User)request.getSession().getAttribute("user");
+
             if (null == user) {
                 request.getRequestDispatcher("/CommentLIstServlet").forward(request, response);
             } else {
@@ -43,6 +45,9 @@ public class CommentServlet extends HttpServlet {
                 System.out.println(comment);
                 boolean result= commentService.addComment(comment);
                 if (result) {
+                    request.getSession().setAttribute("comment",comment);
+//                    request.getSession().setAttribute("comment", commentService.queryComment(comment.getUserId(),comment.getCreateTime()));
+//                    Comment comment1= (Comment) request.getSession().getAttribute("comment");
                     request.getRequestDispatcher("/CommentLIstServlet").forward(request, response);
                 } else {
                     request.getRequestDispatcher("/add_comment.jsp").forward(request, response);

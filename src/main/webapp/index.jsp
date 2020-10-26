@@ -1,6 +1,6 @@
 <html>
 <body>
-<h2>welcome to FileManager</h2>
+<h2>welcome</h2>
 <a href="/login.jsp">login</a>
 </body>
 </html>

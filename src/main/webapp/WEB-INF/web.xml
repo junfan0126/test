@@ -40,29 +40,40 @@
   </servlet>
 
   <servlet>
-    <servlet-name>CommentLIstServlet</servlet-name>
-    <servlet-class>com.cs533.Servlet.CommentLIstServlet</servlet-class>
+    <servlet-name>AddGreatServlet</servlet-name>
+    <servlet-class>com.cs533.Servlet.AddGreatServlet</servlet-class>
   </servlet>
 
 
   <servlet>
-    <servlet-name>FileServlet</servlet-name>
-    <servlet-class>com.cs533.Servlet.FileServlet</servlet-class>
+    <servlet-name>CommentLIstServlet</servlet-name>
+    <servlet-class>com.cs533.Servlet.CommentLIstServlet</servlet-class>
+  </servlet>
+
+<!--  <servlet>-->
+<!--    <servlet-name>FileServlet</servlet-name>-->
+<!--    <servlet-class>com.cs533.Servlet.FileServlet</servlet-class>-->
+<!--  </servlet>-->
+
+
+  <servlet>
+    <servlet-name>MessageServlet</servlet-name>
+    <servlet-class>com.cs533.Servlet.MessageServlet</servlet-class>
   </servlet>
 
   <servlet-mapping>
-    <servlet-name>FileServlet</servlet-name>
+    <servlet-name>MessageServlet</servlet-name>
     <url-pattern>/addMessagePrompt.do</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>
     <servlet-name>CommentLIstServlet</servlet-name>
-    <url-pattern>/CommentListServlet</url-pattern>
+    <url-pattern>/CommentLIstServlet</url-pattern>
   </servlet-mapping>
 
 
   <servlet-mapping>
-    <servlet-name>FileServlet</servlet-name>
+    <servlet-name>MessageServlet</servlet-name>
     <url-pattern>/addMessage.do</url-pattern>
   </servlet-mapping>
 
@@ -71,9 +82,10 @@
     <url-pattern>/userInfo.do</url-pattern>
   </servlet-mapping>
 
+
   <servlet-mapping>
-    <servlet-name>CommentLIstServlet</servlet-name>
-    <url-pattern>/CommentLIstServlet</url-pattern>
+    <servlet-name>AddGreatServlet</servlet-name>
+    <url-pattern>/AddGreatServlet</url-pattern>
   </servlet-mapping>
 
   <servlet-mapping>

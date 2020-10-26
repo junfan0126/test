@@ -26,7 +26,7 @@
 </nav>
 <div class="container">
     <div class="jumbotron">
-        <h1>Hello, ${user.username}!</h1>
+        <h1>写下你想说的话</h1>
 
     </div>
     <div class="page-header">
